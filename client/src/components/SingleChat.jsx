@@ -105,7 +105,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     
 
     useEffect(() => {
-        socket = io("ws://localhost:8080", {
+        socket = io("ws://api-mern-chat-2-0.onrender.com", {
             withCredentials: true
         })
         socket.emit("setup", user)//emit (socket) es como el metodo 'send' en la libreria ws

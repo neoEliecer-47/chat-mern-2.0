@@ -47,7 +47,7 @@ const server = app.listen(PORT, () => console.log('conectado server http://local
 const io = new Server(server, {
     pingTimeout: 600000,//el tiempo que esperará (estando inactivo) antes de cerrar la conexion para ahorrar banda ancha de internet
     cors: {
-        origin: ["http://localhost:5173"],
+        origin: ["https://chat-mern-2.netlify.app"],
         credentials: true,
     }
 })
