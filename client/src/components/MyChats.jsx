@@ -90,7 +90,7 @@ const MyChats = ({ fetchAgain }) => {
                 color={selectedChat === chat ? "white" : "black"}
                 bg={ selectedChat === chat ? "#38B2AC" : "#E8E8E8"}
                 onClick={() => setSelectedChat(chat)}
-                key={chat._id}
+                key={chat?._id}
               >
                 <Text>
                   {!chat.isGroupChat ? getSender(loggedUser, chat.users) : chat.chatName}{/*!chat.isGroupChat es como decir === false, si se cumple hace lo del ? */}
