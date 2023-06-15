@@ -7,7 +7,7 @@ import axios from "axios"
 import UserListItem from "../avatar/UserListItem"
 
 
-const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain }) => {
+const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
   
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { user, selectedChat, setSelectedChat } = useUserContext()
@@ -55,6 +55,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain }) => {
 
            currentUserToLeaveGroup._id === user._id ? setSelectedChat() : setSelectedChat(data)//si el user que le estamos enviando seamos nostros u otro es igual al user que esta conectado, entonces ya no querremos ver ese chat. de lo contrario solo actualiza el chat y los usuarios sin el que eliminamos obviamente
            setFetchAgain(!fetchAgain)
+           fetchMessages()
            setLoading(false)
 
            toast({
