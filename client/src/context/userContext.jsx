@@ -9,6 +9,7 @@ const UserProvider = ({ children }) => {
   const [ready, setReady] = useState(false)
   const [selectedChat, setSelectedChat] = useState(null)
   const [chats, setChats] = useState([])
+  const [notifications, setNotifications] = useState([])
 
   const navigate = useNavigate()
   
@@ -46,7 +47,7 @@ const UserProvider = ({ children }) => {
 
 
   return (
-    <UserContext.Provider value={{ user, setUser, ready, selectedChat,setSelectedChat, chats, setChats }}>
+    <UserContext.Provider value={{ user, setUser, ready, selectedChat,setSelectedChat, chats, setChats, notifications, setNotifications }}>
         {children}
     </UserContext.Provider>
   )
