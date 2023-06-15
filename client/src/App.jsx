@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const App = () => {
   
-  axios.defaults.baseURL = 'http://localhost:8080/api/v1'
+  axios.defaults.baseURL = 'https://api-mern-chat-2-0.onrender.com/api/v1'//'http://localhost:8080/api/v1'
   axios.defaults.withCredentials = true;
   
   return (
